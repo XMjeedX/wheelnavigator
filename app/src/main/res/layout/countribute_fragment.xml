@@ -1,0 +1,177 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    >
+<ScrollView
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_above="@id/bottom_navigation">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        tools:context=".CountributeActivity"
+        android:orientation="vertical"
+        android:gravity="center"
+        android:background="@color/AliceBlue">
+
+
+
+    <EditText
+        android:id="@+id/PlaceName"
+        android:layout_width="2in"
+        android:layout_height="wrap_content"
+        android:hint="Place Name :"
+        android:gravity="center"
+        android:layout_margin="3dp"
+        android:minHeight="48dp"
+        android:freezesText="true"/>
+
+    <EditText
+        android:id="@+id/PlaceTelephone"
+        android:layout_width="2in"
+        android:layout_height="wrap_content"
+        android:layout_margin="3dp"
+        android:gravity="center"
+        android:minHeight="48dp"
+        android:hint="Telephone No. :"
+        />
+    <EditText
+        android:id="@+id/commercial_registration_number"
+        android:layout_width="2in"
+        android:layout_height="wrap_content"
+        android:layout_margin="3dp"
+        android:gravity="center"
+        android:minHeight="48dp"
+        android:hint="Commercial Registration Number :"
+        />
+    <EditText
+        android:id="@+id/PlaceEmail"
+        android:layout_width="2in"
+        android:layout_height="wrap_content"
+        android:layout_margin="4dp"
+        android:gravity="center"
+        android:minHeight="48dp"
+        android:hint="Place Email :"
+        />
+
+        <TextView
+
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="left"
+            android:text="Choose your place type from the list :"
+            android:textStyle="bold"/>
+
+        <Spinner
+            android:id="@+id/dynamic_spinner"
+            android:layout_width="250dp"
+            android:layout_height="50dp"
+
+           />
+    <TextView
+
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="left"
+        android:text="* in the next field write a description of the Wheelchair Services  Provided by your place"
+        android:textStyle="bold"/>
+
+        <EditText
+            android:id="@+id/DescriptionOfServices"
+            android:layout_width="2in"
+            android:layout_height="250dp"
+            android:layout_margin="4dp"
+            android:gravity="left"
+            android:hint=" "
+            android:minHeight="48dp"
+            tools:ignore="SpeakableTextPresentCheck"
+            />
+
+
+        <Button
+            android:id="@+id/ChooseLocation"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Choose place location" />
+
+        <TextView
+
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="left"
+            android:text="Please Upload a logo for your place :"
+            android:textStyle="bold"/>
+        <ImageView
+            android:id="@+id/LogoChoose"
+            android:layout_width="110dp"
+            android:layout_height="100dp"
+            app:srcCompat="@drawable/ic_baseline_image_24" />
+
+        <Button
+            android:id="@+id/LogoUpload"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Upload"
+            android:textAllCaps="false" ></Button>
+
+        <TextView
+        android:id="@+id/UploadText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="left"
+        android:text="Please Upload the pictures for the services stated above"
+        android:textStyle="bold"/>
+
+
+        <ImageView
+            android:id="@+id/choose"
+            android:layout_width="110dp"
+            android:layout_height="100dp"
+            app:srcCompat="@drawable/ic_baseline_image_24" />
+
+        <Button
+            android:id="@+id/Upload"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Upload"
+            android:textAllCaps="false"></Button>
+
+
+
+
+        <Button
+            android:id="@+id/Send_Request"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Send Request"
+            android:textAllCaps="false"
+
+           ></Button>
+
+
+
+
+
+    </LinearLayout>
+</ScrollView>
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/bottom_navigation"
+        android:layout_width="match_parent"
+        android:background="@color/AliceBlue"
+        android:layout_height="60dp"
+        android:layout_gravity="bottom"
+
+        android:layout_alignParentBottom="true"
+        app:itemIconTint="@drawable/selector"
+        app:itemTextColor="@drawable/selector"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:menu="@menu/bottom_nav_menu" />
+</RelativeLayout>
+
+
+
